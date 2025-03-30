@@ -1,0 +1,309 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+
+}
+
+h2 {
+    color: #FF6B82;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+h2::before, h2::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    border-top: 1px solid #C8C8C8;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+
+.option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+    
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    border: 1px solid #C8C8C8;;
+    
+}
+
+.option input {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #DADADA;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.option input:checked {
+    background-color: #FF6B82;
+    border: 5px solid #FF6B82;
+}
+
+
+.option.selected {
+    
+    
+    border: 2px solid #FF6B82;
+    background: #FFF9FA;
+    
+}
+
+
+
+.option .most-popular {
+    background: #ff4d79;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    border-radius: 5px;
+    display: none;
+}
+.option .content {
+    padding-left: 35px;
+}
+
+.option strong {
+    font-size: 14px;
+    display: block;
+}
+
+.option p {
+    font-size: 12px;
+    margin: 3px 0;
+    color: #000;
+}
+
+.option .price {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 250px;
+}
+
+.option s {
+    font-size: 10px;
+    text-decoration: line-through;
+    color: #000;
+    opacity: 0.3;
+    margin-left: 250px;
+}
+
+/* Discount  */
+.discount {
+    position: absolute;
+    left: 150px;
+    top: 15px;
+    background: #FF6B82;
+    color: white;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+
+.option .dropdowns {
+    display: none;
+    margin-top: 10px;
+    padding-left: 35px;
+}
+
+.option.selected .dropdowns {
+    display: block;
+}
+
+/* Most Popular */
+.most-popular {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #FF6B82;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: none;
+}
+.option input:checked + .content .most-popular {
+    display: block;
+}
+
+
+
+
+/* Add to Cart Button */
+.add-to-cart {
+    width: 100%;
+    padding: 12px;
+    background: #FF6B82;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+
+
+
+
+}
+
+.add-to-cart:hover {
+    background: #e0436b;
+}
+
+
+.option:active {
+    transform: scale(0.98);
+}
+
+
+.option {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+
+
+.selection-info {
+    display: flex;
+    justify-content: space-around;
+    
+   
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.number {
+    font-size: 12px; 
+    font-weight: normal;
+    color: black;
+}
+
+
+.delivery-total-container {
+    display: flex;
+   
+}
+
+
+
+.free-delivery {
+    
+    
+    margin-top: 20px;
+    margin-right: 250px;
+    
+
+
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+
+color: #FF6B82;
+
+
+}
+
+
+
+.total {
+   
+font-weight: 500;
+  
+
+   
+}
+
+
+
+p.Standard{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+select {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #C8C8C8;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+}
+
+
+.selected-option {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 5px;
+}
+
+
+
+.option .dropdowns {
+    display: none;
+    margin-top: 10px;
+    padding-left: 35px;
+}
+
+
+.option.selected .dropdowns {
+    display: block;
+}
+
+select {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border: 1px solid #C8C8C8;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 120px;
+
+    appearance: none; 
+    
+
+    background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 9l5 7 5-7z"/></svg>') no-repeat right 10px center;
+    
+    background-size: 16px; 
+    text-align: left;
+}
+
